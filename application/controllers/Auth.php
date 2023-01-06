@@ -34,7 +34,10 @@ class Auth extends CI_Controller {
 			$sess_array = array();
 			foreach ($result as $row) {
 				$sess_data = array(
-					'email' => $row->role
+					'email' => $row->email,
+					'firstname' => $row->firstname,
+					'lastname' => $row->lastname,
+					'staffId' => $row->staff_id
 				);
 				$this->session->set_userdata('logged_in',$sess_data);
 			}

@@ -11,9 +11,9 @@
                                 </div>
                                 <div class="nk-block-between-md g-4">
                                     <div class="nk-block-head-content">
-                                        <h2 class="nk-block-title fw-normal">Raymond Easy</h2>
+                                        <h2 class="nk-block-title fw-normal"><?php echo $this->session->userdata['logged_in']['firstname'] . ' ' . $this->session->userdata['logged_in']['lastname']; ?></h2>
                                         <div class="nk-block-des">
-                                            <p>Welcome to your dashboard</p>
+                                            <p>A glance of the Budget Monitoring System. Have fun!</p>
                                         </div>
                                     </div><!-- .nk-block-head-content -->
                                     <div class="nk-block-head-content">
@@ -43,13 +43,12 @@
                                                 </div>
                                             </div><!-- .nk-block-head -->
                                             <div class="nk-block">
-                                                <div class="card card-bordered text-light is-dark h-100" >
-                                                  <a href="index.html">
+                                                <div class="card card-bordered text-light is-dark h-100">
                                                     <div class="card-inner">
                                                         <div class="nk-wg7">
                                                             <div class="nk-wg7-stats">
-                                                               <!-- <div class="nk-wg7-title">Available balance in USD</div>-->
-                                                                <div class="number-lg amount">Approval</div>
+                                                                <div class="nk-wg7-title">Available balance in USD</div>
+                                                                <div class="number-lg amount">179,850.950</div>
                                                             </div>
                                                             <div class="nk-wg7-stats-group">
                                                                 <div class="nk-wg7-stats w-50">
@@ -66,7 +65,6 @@
                                                             </div>
                                                         </div><!-- .nk-wg7 -->
                                                     </div><!-- .card-inner -->
-                                                  </a>
                                                 </div><!-- .card -->
                                             </div><!-- .nk-block -->
                                         </div><!-- .nk-block -->
@@ -76,7 +74,7 @@
                                             <div class="nk-block-head-xs">
                                                 <div class="nk-block-between-md g-2">
                                                     <div class="nk-block-head-content">
-                                                       <!-- <h5 class="nk-block-title title">Digital Wallets</h5> -->
+                                                       <h5 class="nk-block-title title">Digital Wallets</h5>
                                                     </div>
                                                     <div class="nk-block-head-content">
                                                         <a href="html/crypto/wallets.html" class="link link-primary">See All</a>
@@ -95,7 +93,7 @@
                                                                     <h1 class="nk-wgw-title title">Travel Request</h1>
                                                                 </div>
                                                                 <div class="nk-wgw-balance">
-                                                                    <!--<div class="amount">4.434953<span class="currency currency-nio">NIO</span></div> -->
+                                                                    <div class="amount">4.434953<span class="currency currency-nio">NIO</span></div>
                                                                 </div>
                                                             </a>
                                                         </div>
@@ -112,7 +110,7 @@
                                                                     <h1 class="nk-wgw-title title">Imprest</h1>
                                                                 </div>
                                                                 <div class="nk-wgw-balance">
-                                                                   <!--<div class="amount">4.434953<span class="currency currency-btc">BTC</span></div>-->
+                                                                   <div class="amount">4.434953<span class="currency currency-btc">BTC</span></div>
                                                                 </div>
                                                             </a>
                                                         </div>
@@ -129,7 +127,7 @@
                                                                     <h1 class="nk-wgw-title title">Imprest Retirement</h1>
                                                                 </div>
                                                                 <div class="nk-wgw-balance">
-                                                                    <!--<div class="amount">0.000560<span class="currency currency-eth">ETH</span></div>-->
+                                                                    <div class="amount">0.000560<span class="currency currency-eth">ETH</span></div>
                                                                 </div>
                                                             </a>
                                                         </div>
@@ -141,7 +139,7 @@
                                             <div class="nk-block-head-xs">
                                                 <div class="nk-block-between-md g-2">
                                                     <div class="nk-block-head-content">
-                                                        <!--<h6 class="nk-block-title title">Fiat Accounts</h6> -->
+                                                        <h6 class="nk-block-title title">Fiat Accounts</h6>
                                                     </div>
                                                     <div class="nk-block-head-content">
                                                         <a href="html/crypto/wallets.html" class="link link-primary">See All</a>
@@ -160,7 +158,7 @@
                                                                     <h1 class="nk-wgw-title title">Viament</h1>
                                                                 </div>
                                                                 <div class="nk-wgw-balance">
-                                                                   <!--<div class="amount">4.434953<span class="currency currency-nio">NIO</span></div>-->
+                                                                   <div class="amount">4.434953<span class="currency currency-nio">NIO</span></div>
                                                                 </div>
                                                             </a>
                                                         </div>
@@ -177,7 +175,7 @@
                                                                     <h1 class="nk-wgw-title title">Employee Invoicing</h1>
                                                                 </div>
                                                                 <div class="nk-wgw-balance">
-                                                                    <!--<div class="amount">4.434953<span class="currency currency-btc">BTC</span></div>-->
+                                                                    <div class="amount">4.434953<span class="currency currency-btc">BTC</span></div>
                                                                 </div>
                                                             </a>
                                                         </div>
@@ -194,7 +192,7 @@
                                                                     <h1 class="nk-wgw-title title">Cheques</h1>
                                                                 </div>
                                                                 <div class="nk-wgw-balance">
-                                                                    <!--<div class="amount">0.000560<span class="currency currency-eth">ETH</span></div>-->
+                                                                    <div class="amount">0.000560<span class="currency currency-eth">ETH</span></div>
                                                                 </div>
                                                             </a>
                                                         </div>
