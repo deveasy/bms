@@ -7,14 +7,14 @@ class Users_model extends CI_Model{
 	}
 
 	function getUsers(){
-		$query = $this->db->get('users');
+		$query = $this->db->get('employees');
 
         return $query->result();
 	}
 
 	public function getUser($username){
 		$this->db->where('username', $username);
-        $query = $this->db->get('users');
+        $query = $this->db->get('employees');
         if($query->num_rows() > 0){
             return $query->row();
         }
@@ -28,9 +28,15 @@ class Users_model extends CI_Model{
             'firstname' => $this->input->post('firstname'),
             'lastname' => $this->input->post('lastname'),
             'email' => $this->input->post('email'),
-            'gender' => $this->input->post('gender')
+            'gender' => $this->input->post('gender'),
+            'phone' => $this->input->post('phone'),
+            'unit' => $this->input->post('unit'),
+            'department' => $this->input->post('department'),
+            'title' => $this->input->post('title'),
+            'rank' => $this->input->post('rank'),
+            'active' => 1
         );
-        $this->db->insert('users', $data);
+        $this->db->insert('employees', $data);
     }
 
     public function updateUser($username){
@@ -41,11 +47,19 @@ class Users_model extends CI_Model{
             'email' => $this->input->post('email'),
             'gender' => $this->input->post('gender')
         );
-        $this->db->update('users', $data);
+        $this->db->update('employees', $data);
     }
 
     public function deleteUser($username){
         $this->db->where('username', $username);
-        $this->db->delete('users');
+        $this->db->delete('employees');
+    }
+
+    public function updatePassword($username){
+        $data = array(
+            'password' => '5f4dcc3b5aa765d61d8327deb882cf99'
+        );
+        $this->db->where('username', $username);
+        $this->db->update('employees', $data);
     }
 }

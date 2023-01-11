@@ -11,9 +11,9 @@
                                         </a>
                                     </li>
                                     <li class="nk-menu-item">
-                                        <a href="html/crypto/accounts.html" class="nk-menu-link">
+                                        <a href="<?php echo base_url(); ?>users" class="nk-menu-link">
                                             <span class="nk-menu-icon"><em class="icon ni ni-user-c"></em></span>
-                                            <span class="nk-menu-text">Travel Request</span>
+                                            <span class="nk-menu-text">Users</span>
                                         </a>
                                     </li>
                                     <li class="nk-menu-item">
@@ -63,20 +63,5 @@
                                             </li>
                                         </ul>--><!-- .nk-menu-sub -->
                                     </li><!-- .nk-menu-item -->
-                                    <li class="nk-menu-heading">
-                                        <h6 class="overline-title">Return to</h6>
-                                    </li>
-                                    <li class="nk-menu-item">
-                                        <a href="html/index.html" class="nk-menu-link">
-                                            <span class="nk-menu-icon"><em class="icon ni ni-dashlite"></em></span>
-                                            <span class="nk-menu-text">Main Dashboard</span>
-                                        </a>
-                                    </li>
-                                    <li class="nk-menu-item">
-                                        <a href="html/components.html" class="nk-menu-link">
-                                            <span class="nk-menu-icon"><em class="icon ni ni-layers"></em></span>
-                                            <span class="nk-menu-text">All Components</span>
-                                        </a>
-                                    </li>
                                 </ul><!-- .nk-menu -->
                             </div>

@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Users extends CI_Controller {
-
 	$firstname = '';
 	$lastname = '';
 	$staffId = '';
 	$email = '';
+
+class Users extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
@@ -15,17 +15,31 @@ class Users extends CI_Controller {
 			redirect('auth', 'refresh');
 		}
 
-		$this->load->model('dashboard_model');
+		$this->load->model('users_model');
 	}
 	
 	public function index()
 	{
-		$this->load->view('pages/users_view');
+		$data['users'] = $this->users_model->getUsers();
+		$this->load->view('user/users_view', $data);
 	}
 
 	public function user($username){
 		$data['user'] = $this->users_model->getUser($username);
 		$this->load->view('user/user_view', $data);
+	}
+
+	public function add_user(){
+		$this->load->view('user/add_user');
+	}
+
+	public function import_user(){
+		$this->load->view('user/import_user');
+	}
+
+	public function edit_user($username){
+		$data['user'] = $this->users_model->getUser($username);
+		$this->load->view('user/add_user', $data);
 	}
 
 	public function user_notifications($username){
@@ -43,18 +57,23 @@ class Users extends CI_Controller {
 		$this->load->view('user/user_settings', $data);
 	}
 
-	public function delete_user($username){
-		$this->users_model->deleteUser($username);
-		redirect('users');
-	}
-
-	public function add_user(){
+	function addUser(){
 		$this->users_model->addUser();
 		redirect('users');
 	}
 
-	public function update_user($username){
+	function updateUser($username){
 		$this->users_model->update_user($username);
+		redirect('users');
+	}
+
+	function deleteUser($username){
+		$this->users_model->deleteUser($username);
+		redirect('users');
+	}
+
+	function resetPassword($username){
+		$this->users_model->resetPassword($username);
 		redirect('users');
 	}
 }
