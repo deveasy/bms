@@ -5,7 +5,7 @@
                                         <h6 class="overline-title">Dashboard</h6>
                                     </li>
                                     <li class="nk-menu-item">
-                                        <a href="html/crypto/index.html" class="nk-menu-link">
+                                        <a href="<?php echo base_url(); ?>pages/approval" class="nk-menu-link">
                                             <span class="nk-menu-icon"><em class="icon ni ni-dashboard"></em></span>
                                             <span class="nk-menu-text">Approval</span>
                                         </a>
